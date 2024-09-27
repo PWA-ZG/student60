@@ -1,0 +1,27 @@
+{
+  "name": "PWA-Task-Manager",
+  "short_name": "Task Manager",
+  "description": "PWA Task Manager",
+  "display": "fullscreen",
+  "theme_color": "red",
+  "background_color": "#DDD",
+  "start_url": "/index.html",
+  "scope": ".",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "lang": "en-US",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://edgar.fer.hr",
+      "id": "hr.fer.edgar"
+    }
+  ],
+  "icons": [
+    {
+      "src": "assets/img/firefox/firefox-general-256-256.png",
+      "sizes": "256x256"
+    }
+  ]
+}

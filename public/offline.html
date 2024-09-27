@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progressive Web App - OFFLINE MODE</title>
+<link rel="stylesheet" href="./assets/site.css" />
+<link rel="manifest" href="./manifest.json" />
+</head>
+<body>
+    <div id="app-container">
+        <h1>Progressive Web App</h1>
+        <p id="battery-level">Battery Level: N/A</p>
+        <button id="btnEnableNotifications">Enable Notifications</button>
+        <button id="installButton" style="display:none;">Install App</button>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="task-list"></ul>
+        <p id="status">Loading...</p>
+    </div>
+    <script>            
+        navigator.serviceWorker
+        .register("./sw.js", { type: "module" })
+        .then((reg) => console.log("SW registered!", reg))
+        .catch((err) => console.error("Error registering service worker", err));
+        </script>
+    <script type="module" src="tasks.js"></script>
+    <script type="module" src="push.js"></script>
+</body>
+</html>
